@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+    --txt-color: #333;
+    --main-color: #252525;
+}
+
+html {
+    font-size: 100%;
+    min-height: 700px;
+    min-width: 400px;
+}
+
+body {
+    margin: 0;
+    font-size: 0.875rem;
+    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+    ;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    color: var(--txt-color);
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}

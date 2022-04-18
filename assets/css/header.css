@@ -1,0 +1,52 @@
+.header-wrap {
+    height: 60px;
+    align-items: center;
+}
+
+.search_info {
+    display: none;
+}
+
+.header__search {
+    justify-content: end;
+}
+
+.cart-icon {
+    font-size: 26px;
+    margin-right: 10px;
+}
+
+.header__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__logo img {
+    height: 38px;
+}
+
+.btn-header-search {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    font-size: 26px;
+    right: 6px;
+}
+
+.navbar {
+    background-color: var(--main-color);
+    height: 50px;
+}
+
+.nav__list {
+    margin: auto;
+    list-style: none;
+    justify-content: center;
+}
+
+.nav__list>li {
+    padding: 0.5rem 0.9375rem;
+    color: #fff;
+    font-size: 0.9375rem;
+}
