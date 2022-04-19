@@ -50,6 +50,9 @@ a:hover {
 }
 
 .footer {
+    margin-top: 40px;
     background-color: black;
     height: 200px;
+    width: 100%;
+    bottom: 200px;
 }

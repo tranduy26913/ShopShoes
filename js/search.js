@@ -7,7 +7,7 @@ const searchProduct = ()=>{
     productSearch.innerHTML=''
     var query = search.value
     i = Math.floor(Math.random() * 3)
-    var result = products.slice(i,(i+6)%6)
+    var result = products.slice(i,(i+3)%6)
     result.forEach(item=>{
         let product = `
         <div class="item col-lg-3 col-md-4 col-sm-6 col-12">
