@@ -43,10 +43,111 @@
     margin: auto;
     list-style: none;
     justify-content: center;
+    gap: 5px;
 }
 
 .nav__list>li {
     padding: 0.5rem 0.9375rem;
     color: #fff;
     font-size: 0.9375rem;
+}
+
+.header__cart {
+    height: 100%;
+}
+
+.cart__heading {
+    position: relative;
+}
+
+.header__cart:hover .header__cart__body {
+    display: block;
+}
+
+.header__cart__body:hover {
+    display: block;
+}
+
+.header__cart__body {
+    position: absolute;
+    display: none;
+    z-index: 100;
+    width: 375px;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    right: 0;
+    top: 54px;
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+.header__cart__body::before {
+    top: -10px;
+    right: 0;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.header__cart__img {
+    height: 110px;
+    width: 110px;
+    margin-right: 0.625rem;
+}
+
+.header__cart__item__title {
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-clamp: 2;
+    text-align: justify;
+}
+
+.header__cart__item__price {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.header__cart__list {
+    list-style: none;
+    max-height: 500px;
+}
+
+.header__cart__item__quanlity {
+    border: 1px solid #cacaca;
+    border-radius: 2px;
+}
+
+.header__cart__item__quanlity button {
+    border: none;
+    background-color: transparent;
+    height: 24px;
+    width: 24px;
+}
+
+.header__cart__item__quanlity input {
+    border: none;
+    background-color: transparent;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+}
+
+.header__cart__item__quanlity button:first-child {
+    border-right: 1px solid #cacaca;
+}
+
+.header__cart__item__quanlity button:last-child {
+    border-left: 1px solid #cacaca;
+}
+
+.header__cart__button {
+    margin: 0 10px;
+}
+
+.header__cart__button button {
+    min-width: 150px;
 }
