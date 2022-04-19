@@ -1,3 +1,7 @@
+header {
+    z-index: 99;
+}
+
 .header-wrap {
     height: 60px;
     align-items: center;
@@ -9,6 +13,96 @@
 
 .header__search {
     justify-content: end;
+}
+
+.header__icon {
+    font-size: 28px;
+    display: block;
+}
+
+.header__icon__list {
+    display: none;
+}
+
+.header__icon__search {
+    display: none;
+}
+
+@media only screen and (max-width: 992px) {
+    .header__left__wrap {
+        padding-top: 2px;
+        justify-content: end !important;
+    }
+    .header__account {
+        display: none !important;
+    }
+    .header__icon__search {
+        display: none;
+    }
+    .cart__heading {
+        display: none !important;
+    }
+    .header__icon__list {
+        display: block;
+    }
+    .navbar {
+        display: none;
+        background-color: transparent !important;
+        height: 0 !important;
+        padding: 0;
+        margin: 0;
+    }
+    .navbar.active {
+        display: block;
+    }
+    .nav__list {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header__search {
+        display: none !important;
+    }
+    .container {
+        padding: 0 15px;
+        max-width: 100%;
+    }
+    .header__account {
+        display: none !important;
+    }
+    .header__left__wrap {
+        padding-left: 4rem;
+        padding-top: 2px;
+        justify-content: space-between !important;
+    }
+    .header__icon__search {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    .container {
+        padding: 0 15px;
+        max-width: 100%;
+    }
+    .header__search {
+        display: none !important;
+    }
+    .header__account {
+        display: none !important;
+    }
+    .header__cart {
+        display: none !important;
+    }
+    .header__left__wrap {
+        padding-left: 3rem;
+        padding-top: 2px;
+        justify-content: space-between !important;
+    }
 }
 
 .cart-icon {
@@ -35,14 +129,18 @@
 }
 
 .navbar {
+    position: sticky;
+    top: 0;
     background-color: var(--main-color);
     height: 50px;
+    z-index: 99;
 }
 
 .nav__list {
     margin: auto;
     list-style: none;
     justify-content: center;
+    background-color: var(--main-color);
     gap: 5px;
 }
 

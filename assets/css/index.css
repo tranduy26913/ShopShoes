@@ -8,6 +8,9 @@
 :root {
     --txt-color: #333;
     --main-color: #252525;
+    --width-sm: 576px;
+    --width-md: 768px;
+    --width-lg: 992px;
 }
 
 html {
@@ -35,4 +38,18 @@ body {
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+a {
+    text-decoration: none;
+    color: var(--txt-color);
+}
+
+a:hover {
+    color: var(--txt-color);
+}
+
+.footer {
+    background-color: black;
+    height: 200px;
 }

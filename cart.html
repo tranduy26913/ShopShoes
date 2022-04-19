@@ -6,13 +6,12 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Shop Shoes</title>
     <link rel="stylesheet" type="text/css" href="assets/css/header.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/item.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/section.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/cart.css" />
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -39,8 +38,8 @@
                             </ul>
                             <input id="search" type="text" class="form-control" placeholder="Tìm kiếm">
                             <span>
-                                <button  onclick="
-                                event.preventDefault();searchProduct()" type="submit" class="btn-header-search"><i class='bx bx-search-alt-2'></i></button>
+                                <button onclick="
+                                event.preventDefault();searchProduct()" class="btn-header-search"><i class='bx bx-search-alt-2'></i></button>
                             </span>
                         </form>
                     </div>
@@ -101,49 +100,49 @@
         </nav>
     </header>
 
-
     <section>
         <div class="container">
-            <div class="section-title" style="text-align: center;">
-                <h2><a>SẢN PHẨM NỔI BẬT</a></h2>
-            </div>
-            <div class="section-content">
-                <div id="product-special" class="row">
-                </div>
+            <div class="row">
+                <nav style="--bs-breadcrumb-divider: '>';padding:1rem 0" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Giỏ hàng</li>
+                    </ol>
+                </nav>
             </div>
         </div>
     </section>
     <section>
         <div class="container">
-            <div class="section-title" style="text-align: center;">
-                <h2><a>SẢN PHẨM NỔI BẬT</a></h2>
-            </div>
             <div class="section-content">
                 <div class="row">
-                    <div class="item col-3 col-md-4">
-                        <div class="item__thumbnail">
-                            <img src="assets/img/AIR JORDAN 1 Triple White.jpg" alt="">
-                            <img src="assets/img/AIR JORDAN 1 Triple White_2.jpg" alt="">
+                    <table id="cart-main" class="col-12 cart__list">
+                        <thead>
+                            <tr>
+                                <th style="width:20% !important">Sản phẩm</th>
+                                <th style="width:28% !important">Thông tin sản phẩm</th>
+                                <th style="width:17% !important">Đơn giá</th>
+                                <th style="width:17% !important">Số lượng</th>
+                                <th style="width:13% !important">Thành tiền</th>
+                                <th style="width:5% !important">Xoá</th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-                        </div>
-                        <div class="item__info">
-                            <div class="item__name">
-                                AIR JORDAN 1 TRIPLE WHITE
-                            </div>
-                            <div class="item__price">
-                                2.500.000đ
-                            </div>
-                        </div>
-                        <div class="item__button d-flex">
-                            <button class="btn-primary btn-item">
-                                <span class="btn-item__txt">Chọn mua</span>
-                                <span class="btn-item__icon"><i class='bx bx-cart-add'></i></span>
-                            </button>
-                        </div>
-
+                        </tbody>
+                    </table>
+                    <div class="d-flex justify-content-end align-items-center" style="padding:1rem 0;line-height:46px">
+                        <span style="font-size: 0.9375rem;">Tổng tiền:</span>
+                        <span id="total-cart-main">4.100.000đ</span>
+                    </div>
+                    <div class="d-flex justify-content-end align-items-center cart__button" style="gap:1rem;padding:1rem 0">
+                        <a href="/ShopShoes/index.html"><button type="button" class="btn btn-light" style="background-color: #f1f1f1;">Tiếp tục mua hàng</button></a>
+                        <button type="button" class="btn btn-dark">Tiến hành đặt hàng</button>
                     </div>
                 </div>
+
             </div>
+
         </div>
     </section>
 
@@ -151,15 +150,17 @@
         <div class="footer">
 
         </div>
+
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js "></script>
     <script src="js/variable.js "></script>
     <script src="js/data.js "></script>
     <script src="js/util.js "></script>
+
     <script src="js/app.js "></script>
     <script src="js/cart.js "></script>
-    <script src="js/search.js"></script>
     <script src="js/index.js "></script>
+    <script src="js/search.js "></script>
 
 </body>
 

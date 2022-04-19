@@ -2,7 +2,6 @@ const increaseQuanlity = (event) => {
     var btnClick = event.target.parentElement
     var input = btnClick.getElementsByTagName("input")[0]
     var idProduct = btnClick.getAttribute("data-id")
-    console.log(idProduct)
     var cart = getCartFromLocalStorage()
     number = 1
     if (input) {
@@ -16,9 +15,8 @@ const increaseQuanlity = (event) => {
             cart.push(newItem)
         }
         setCartToLocalStorage(cart)
-        renderCartHeader(cart)
+        updateCart()
     }
-
 }
 
 const getCartFromLocalStorage = () => {
@@ -46,7 +44,7 @@ const decreaseQuanlity = (event) => {
             input.value = cart[index].quanlity
         }
         setCartToLocalStorage(cart)
-        renderCartHeader(cart)
+        updateCart()
     }
 }
 
@@ -74,7 +72,7 @@ const addToCart = (id) => {
         }
     }
     localStorage.setItem("CART", JSON.stringify(cart))
-    renderCartHeader(cart)
+    updateCart()
 }
 
 const removeFromCart = (id) => {
@@ -89,26 +87,40 @@ const removeFromCart = (id) => {
         console.log(cart)
         var item = document.getElementById(`cart-header-${id}`)
         if (item) item.remove()
+        item = document.getElementById(`cart-main-${id}`)
+        if (item) item.remove()
     }
     localStorage.setItem("CART", JSON.stringify(cart))
     updateCart()
 }
 
+
 const updateCart = () => {
+    if(cartHeader)
+        renderCartHeader()
+    if(cartMain)
+        renderCartMain()
     totalPriceCart()
     setSizeCart()
 }
-const totalCart = document.getElementById("total-cart")
-const sizeCart = document.getElementById("size-cart")
+
 const totalPriceCart = () => {
     var cart = getCartFromLocalStorage()
     total = 0
     cart.forEach(item => {
         total += item.price * item.quanlity
     })
-    totalCart.innerText = numWithCommas(total) + "đ"
+    if(totalCartHeader)
+        totalCartHeader.innerText = numWithCommas(total) + "đ"
+    if(totalCartMain)
+        totalCartMain.innerText = numWithCommas(total) + "đ"
 }
 const setSizeCart = () => {
     var cart = getCartFromLocalStorage()
     sizeCart.innerText = `(${cart.length}) Sản phẩm`
 }
+
+const toggleNavbar = ()=>{
+    navbar.classList.toggle("active")
+}
+updateCart()

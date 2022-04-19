@@ -1,13 +1,13 @@
 
-const cartHeader = document.getElementById("cart-header")
-const productSpecial = document.getElementById("product-special")
 
 let cart = localStorage.getItem("CART")
 cart = JSON.parse(cart)
 if (!cart)
     cart = []
 
-const renderCartHeader = (cart) => {
+//hàm render ra Cart ở header
+const renderCartHeader = () => {
+    var cart = getCartFromLocalStorage()
     cartHeader.innerHTML = ''
     cart.forEach(item => {
         let product = `
@@ -34,42 +34,40 @@ const renderCartHeader = (cart) => {
     </li>
         `
         cartHeader.insertAdjacentHTML("beforeend", product)
-
     })
-    totalPriceCart()
-    setSizeCart()
 }
 
-renderCartHeader(cart)
-
-
+//hàm render ra các item sản phẩm nổi bật
 const renderProductSpecial = () => {
-    console.log(productSpecial)
     products.forEach(item => {
         let product = `
-        <div class="item col-3">
-                            <div class="item__thumbnail">
-                                <img src="${item.img1}" alt="">
-                                <img src="${item.img2}" alt="">
-                            </div>
-                            <div class="item__info">
-                                <div class="item__name">
-                                    ${item.name}
-                                </div>
-                                <div class="item__price">
-                                    ${numWithCommas(item.price)}đ
-                                </div>
-                            </div>
-                            <div class="item__button d-flex">
-                                <button data-id="${item.id}" onclick="addToCart('${item.id}')" class="btn-primary btn-item">
-                                    <span class="btn-item__txt">Chọn mua</span>
-                                    <span class="btn-item__icon"><i class='bx bx-cart-add'></i></span>
-                                </button>
-                            </div>
-    
-                        </div>`
+        <div class="item col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="item__thumbnail">
+                <img src="${item.img1}" alt="">
+                <img src="${item.img2}" alt="">
+            </div>
+            <div class="item__info">
+                <div class="item__name">
+                    ${item.name}
+                </div>
+                <div class="item__price">
+                    ${numWithCommas(item.price)}đ
+                </div>
+            </div>
+            <div class="item__button d-flex">
+                <button data-id="${item.id}" onclick="addToCart('${item.id}')" class="btn-primary btn-item">
+                    <span class="btn-item__txt">Chọn mua</span>
+                    <span class="btn-item__icon"><i class='bx bx-cart-add'></i></span>
+                </button>
+            </div>
+        </div>`
         productSpecial.insertAdjacentHTML("beforeend", product)
     })
 
 }
-renderProductSpecial()
+
+
+
+if(productSpecial)
+    renderProductSpecial()
+
