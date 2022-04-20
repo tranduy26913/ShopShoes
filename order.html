@@ -121,7 +121,7 @@
 
             <div class="section-content">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 order__info">
                         <div class="info__title">Thông tin nhận hàng
                         </div>
                         <div class="info__content">
@@ -148,7 +148,7 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 order__method">
                         <div class="transfer__title">
                             Vận chuyển
                         </div>
@@ -177,8 +177,9 @@
 
                     </div>
                     <div id="order-detail" class="col-lg-4 order-detail">
-                        <div class="order-detail__title">
-                            Đơn hàng (2 sản phẩm)
+                        <div class="order-detail__title d-flex align-items-center">
+                            <span>Đơn hàng (2 sản phẩm)</span>
+                            <span onclick="toggleExpandOrderDetail()" style="transform: translateY(2px);" id="expand-order-detail"><i class='bx bx-chevron-down'></i></span>
                         </div>
                         <div class="row" style="margin-right:0">
                             <hr>
@@ -192,7 +193,7 @@
                                     <input type="text" class="form-control" id="floatingInput" placeholder="TP.HCM">
                                     <label for="floatingInput">Nhập mã giảm giá</label>
                                 </div>
-                                <button class="btn btn-primary" style="width:6rem;height: 2.75rem;margin-left:0.5rem">Áp dụng</button>
+                                <button class="btn btn-primary" style="width:8rem;height: 2.75rem;margin-left:0.5rem">Áp dụng</button>
                             </div>
                             <hr>
 
@@ -221,13 +222,15 @@
                                 <span id="total-payment" style="font-size:1.3125rem ;color:#2a9dcc">4.100.000đ</span>
                             </div>
 
-                            <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div class="d-flex justify-content-between align-items-center mt-4 order-detail__nav">
                                 <a><span style="font-size: 1.0625rem;">Trở về giỏ hàng</span></a>
                                 <button class="btn btn-primary" style="width:122px;height:46px">Đặt hàng</button>
                             </div>
-
-
                         </div>
+                    </div>
+                    <div class="order__nav row mt-4">
+                        <button class="btn btn-primary col-md-12 col-12">Đặt hàng</button>
+                        <a style="font-size: 1.0625rem;text-align:center">Trở về giỏ hàng</a>
                     </div>
                 </div>
             </div>

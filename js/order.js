@@ -5,7 +5,7 @@ const renderOrderItem = ()=>{
     orderDetailList.innerHTML = ''
     cart.forEach(item=>{
         let product = `
-        <li id="order-item-${item.id}" class="order__item d-flex">
+        <li id="order-item-${item.id}" class="order__item d-flex justify-content-between">
             <div class="order__item__img">
                 <img src="${item.img1}" alt="">
                 <div class="order__item__quanlity">
@@ -34,7 +34,7 @@ const updateInfoOrder = ()=>{//cập nhật các chỉ số: số sản phẩm, 
     if(!orderDetail)
         return
     var cart = getCartFromLocalStorage()
-    var countProduct = orderDetail.children[0]
+    var countProduct = orderDetail.children[0].children[0]
     var tempTotal = orderDetail.children[2].getElementsByTagName('table')[0].children[1].children[0].children[1]
     var totalPayment = document.getElementById("total-payment")
 
@@ -49,4 +49,16 @@ const updateInfoOrder = ()=>{//cập nhật các chỉ số: số sản phẩm, 
     totalPayment.innerText = `${numWithCommas(total)}đ`
 }
 
+const toggleExpandOrderDetail = ()=>{
+    var expand = document.getElementById("expand-order-detail")
+    orderDetailList.classList.toggle("active")
+    if(expand.children[0].classList.contains("bx-chevron-down")){
+        expand.children[0].classList.remove("bx-chevron-down")
+        expand.children[0].classList.add("bx-chevron-up")  
+    }
+    else if(expand.children[0].classList.contains("bx-chevron-up")){
+        expand.children[0].classList.remove("bx-chevron-up")
+        expand.children[0].classList.add("bx-chevron-down")  
+    }
+}
 renderOrderItem()

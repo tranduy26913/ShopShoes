@@ -1,5 +1,6 @@
 const cartHeader = document.getElementById("cart-header")//lấy element cart trên header
 const productSpecial = document.getElementById("product-special")//lấy element chứa sản phẩm nổi bật
+const productSales = document.getElementById("product-sales")//lấy element chứa sản phẩm nổi bật
 const cartMain = document.getElementById("cart-main")//lấy element table chứa cart chính
 const totalCartHeader = document.getElementById("total-cart")//lấy element chứa tổng tiền trong giỏ
 const sizeCart = document.getElementById("size-cart")//lấy element kích thước giỏ

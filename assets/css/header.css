@@ -67,10 +67,6 @@ header {
     .header__search {
         display: none !important;
     }
-    .container {
-        padding: 0 15px;
-        max-width: 100%;
-    }
     .header__account {
         display: none !important;
     }
