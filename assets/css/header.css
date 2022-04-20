@@ -152,9 +152,6 @@ header {
 
 .header__cart {
     height: 100%;
-}
-
-.cart__heading {
     position: relative;
 }
 
@@ -175,8 +172,8 @@ header {
     background-color: #fff;
     border-radius: 0.25rem;
     right: 0;
-    top: 54px;
-    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.1);
+    top: 70px;
+    box-shadow: 0px 8px 8px 4px rgba(0, 0, 0, 0.2);
 }
 
 .header__cart__body::before {
@@ -187,7 +184,20 @@ header {
     position: absolute;
     width: 100px;
     height: 20px;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.header__cart__body::after {
+    top: -5px;
+    right: 10px;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    transform: rotateZ(45deg);
+    z-index: 0;
+    background-color: rgb(255, 255, 255);
 }
 
 .header__cart__img {

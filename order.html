@@ -17,19 +17,18 @@
 </head>
 
 <body>
-
     <header>
         <div class="container">
             <div class="header-wrap row">
 
-                <div class="header__logo col-2" style="padding: 10px;">
+                <div class="header__logo col-lg-2 col-6 col-md-2" style="padding: 10px;">
                     <a href="/ShopShoes/index.html"><img src="assets/img/logo.webp" alt=""></a>
 
                 </div>
-                <div class="header__search col-6 row">
+                <div class="header__search col-lg-6 col-md-8 col-sm-8 row">
                     <div class="col-8">
 
-                        <form method="post" class="header__search input-group" style="position: relative;">
+                        <form class="header__search input-group" style="position: relative;">
                             <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Tất cả</button>
                             <ul class="dropdown-menu mb-3">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
@@ -39,18 +38,20 @@
                             </ul>
                             <input id="search" type="text" class="form-control" placeholder="Tìm kiếm">
                             <span>
-                                <button onclick="event.preventDefault();searchProduct()" type="submit" class="btn-header-search"><i class='bx bx-search-alt-2'></i></button>
+                                <button onclick="
+                                event.preventDefault();searchProduct()" class="btn-header-search"><i class='bx bx-search-alt-2'></i></button>
                             </span>
                         </form>
                     </div>
                 </div>
 
-                <div class="col-4 d-flex align-items-center justify-content-end" style="gap:10px;height:100%">
+                <div class="header__left__wrap col-lg-4 col-md-2 col-sm-6 col-6 d-flex align-items-center justify-content-end" style="gap:10px;height:100%">
+                    <span class="header__icon header__icon__search"><i class='bx bx-search-alt-2'></i></span>
                     <div class="header__account align-items-center">
                         <i class='bx bxs-user' style="font-size: 18px;"></i> Tài Khoản
                     </div>
                     <div class="header__cart d-flex align-items-center">
-                        <span class="cart-icon">
+                        <span class="header__icon cart-icon">
                             <i class='bx bx-cart'></i>
                         </span>
 
@@ -59,43 +60,45 @@
                                 <h5 style="margin-bottom: 0;font-size:1rem;font-weight:700">Giỏ hàng</h5>
                             </span>
                             <span id="size-cart" style="font-size:1rem;font-weight:400;">(0) Sản phẩm</span>
-                            <div class="header__cart__body">
-                                <ul id="cart-header" class="header__cart__list" style="max-height: 350px;overflow:auto">
+                        </div>
+                        <div class="header__cart__body">
+                            <ul id="cart-header" class="header__cart__list" style="max-height: 350px;overflow:auto">
 
-                                </ul>
-                                <hr>
-                                <div class="header__cart__total d-flex justify-content-between" style="font-size:1rem ;">
-                                    Tổng cộng:
-                                    <span id="total-cart" style="font-size: 1rem;font-weight:500">2.300.000đ</span>
-                                </div>
-                                <hr>
-                                <div class="header__cart__button  d-flex justify-content-between">
-                                    <a href="/ShopShoes/cart.html"><button class="btn btn-dark">Giỏ hàng</button></a>
-                                    <button class="btn btn-outline-dark">Thanh toán</button>
-                                </div>
+                            </ul>
+                            <hr>
+                            <div class="header__cart__total d-flex justify-content-between" style="font-size:1rem ;">
+                                Tổng cộng:
+                                <span id="total-cart" style="font-size: 1rem;font-weight:500">2.300.000đ</span>
+                            </div>
+                            <hr>
+                            <div class="header__cart__button  d-flex justify-content-between">
+                                <a href="/ShopShoes/cart.html"><button class="btn btn-dark">Giỏ hàng</button></a>
+                                <a href="/ShopShoes/order.html"><button class="btn btn-outline-dark">Thanh toán</button></a>
                             </div>
                         </div>
                     </div>
+                    <span onclick="toggleNavbar()" class="header__icon header__icon__list"><i class='bx bx-list-ul'></i></span>
                 </div>
             </div>
+
         </div>
+        <nav class="navbar" id="navbar">
+            <div class="container">
+                <ul class="d-flex nav__list">
+                    <li>ALL</li>
+                    <li>SALE 50%</li>
+                    <li>NIKE</li>
+                    <li>ADIDAS</li>
+                    <li>VANS</li>
+                    <li>CONVERSE</li>
+                    <li>HÃNG KHÁC</li>
+                    <li>FASION</li>
+                    <li>PHỤ KIỆN</li>
+                    <li>NHẬN THÔNG BÁO SALE</li>
+                </ul>
+            </div>
+        </nav>
     </header>
-    <nav class="navbar">
-        <div class="container">
-            <ul class="d-flex nav__list">
-                <li>ALL</li>
-                <li>SALE 50%</li>
-                <li>NIKE</li>
-                <li>ADIDAS</li>
-                <li>VANS</li>
-                <li>CONVERSE</li>
-                <li>HÃNG KHÁC</li>
-                <li>FASION</li>
-                <li>PHỤ KIỆN</li>
-                <li>NHẬN THÔNG BÁO SALE</li>
-            </ul>
-        </div>
-    </nav>
 
     <section>
         <div class="container">
@@ -112,10 +115,10 @@
 
     <section>
         <div class="container">
-            <div class="section-title">
+            <div class="section-title section-order-title">
                 <h1 style="font-size: 1.5rem;">THANH TOÁN</h1>
             </div>
-            <hr>
+
             <div class="section-content">
                 <div class="row">
                     <div class="col-lg-4">
@@ -173,13 +176,16 @@
                         </div>
 
                     </div>
-                    <div class="col-lg-4 order-detail">
+                    <div id="order-detail" class="col-lg-4 order-detail">
                         <div class="order-detail__title">
                             Đơn hàng (2 sản phẩm)
                         </div>
+                        <div class="row" style="margin-right:0">
+                            <hr>
+                        </div>
                         <div class="order-detail__content">
-                            <ul class="order-detail__list">
-
+                            <ul id="order-detail__list" class="order-detail__list">
+                                <!-- dùng js thêm data vào     -->
                             </ul>
                             <div class="d-flex justify-content-between">
                                 <div class="form-floating" style="width:100%">
@@ -189,6 +195,7 @@
                                 <button class="btn btn-primary" style="width:6rem;height: 2.75rem;margin-left:0.5rem">Áp dụng</button>
                             </div>
                             <hr>
+
                             <table style="width:100%">
                                 <thead>
                                     <tr>
@@ -211,7 +218,7 @@
                             <hr>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span style="font-size: 1.0625rem;">Tổng tiền</span>
-                                <span style="font-size:1.3125rem ;color:#2a9dcc">4.100.000đ</span>
+                                <span id="total-payment" style="font-size:1.3125rem ;color:#2a9dcc">4.100.000đ</span>
                             </div>
 
                             <div class="d-flex justify-content-between align-items-center mt-4">
@@ -241,7 +248,9 @@
     <script src="js/app.js "></script>
     <script src="js/cart.js "></script>
     <script src="js/search.js"></script>
+    <script src="js/order.js"></script>
     <script src="js/index.js "></script>
+
 
 
 </body>

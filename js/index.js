@@ -19,15 +19,6 @@ const increaseQuanlity = (event) => {
     }
 }
 
-const getCartFromLocalStorage = () => {
-    let cart = localStorage.getItem("CART")
-    cart = JSON.parse(cart)
-    return cart ? cart : []
-}
-
-const setCartToLocalStorage = (cart) => {
-    localStorage.setItem("CART", JSON.stringify(cart))
-}
 
 const decreaseQuanlity = (event) => {
     var cart = getCartFromLocalStorage()
@@ -100,6 +91,8 @@ const updateCart = () => {
         renderCartHeader()
     if(cartMain)
         renderCartMain()
+    if(orderDetailList)
+        renderOrderItem()
     totalPriceCart()
     setSizeCart()
 }

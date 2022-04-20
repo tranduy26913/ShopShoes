@@ -6,4 +6,6 @@ const sizeCart = document.getElementById("size-cart")//lấy element kích thư�
 const totalCartMain = document.getElementById("total-cart-main")//lấy element tổng tiền trong giỏ ở Cart chính
 const navbar = document.getElementById("navbar")
 const search = document.getElementById("search")
+const orderDetailList = document.getElementById("order-detail__list")
+const orderDetail = document.getElementById("order-detail")
 

@@ -8,6 +8,7 @@
 :root {
     --txt-color: #333;
     --main-color: #252525;
+    --divider-color: #e1e1e1;
     --width-sm: 576px;
     --width-md: 768px;
     --width-lg: 992px;
