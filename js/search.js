@@ -3,6 +3,7 @@ const searchProduct = ()=>{
     if(link[link.length-1] !== "search.html"){
         location.replace("search.html")
     }
+    
     var productSearch = document.getElementById("product-search")
     productSearch.innerHTML=''
     var query = search.value
