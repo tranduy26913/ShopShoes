@@ -1,7 +1,7 @@
 const searchProduct = ()=>{
-    if(location.pathname !== "/ShopShoes/search.html"){
+    var link = location.pathname.split("/")
+    if(link[link.length-1] !== "search.html"){
         location.replace("search.html")
-        
     }
     var productSearch = document.getElementById("product-search")
     productSearch.innerHTML=''
