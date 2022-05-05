@@ -51,9 +51,29 @@ a:hover {
 }
 
 .footer {
-    margin-top: 40px;
+    padding: 40px 0;
     background-color: black;
-    height: 200px;
     width: 100%;
     bottom: 200px;
+}
+
+.footer__widget {
+    color: #fff;
+}
+
+.footer__widget__title {
+    padding: 13px 0;
+    font-size: 1.125rem;
+}
+
+.footer__widget__body {
+    list-style: none;
+}
+
+.footer__widget__body li {
+    cursor: pointer;
+    padding: 6px 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
