@@ -9,4 +9,5 @@ const navbar = document.getElementById("navbar")
 const search = document.getElementById("search")
 const orderDetailList = document.getElementById("order-detail__list")
 const orderDetail = document.getElementById("order-detail")
+const countItemSearch = document.getElementById("count-item-search")
 

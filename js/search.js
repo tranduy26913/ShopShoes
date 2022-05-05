@@ -9,6 +9,9 @@ const searchProduct = ()=>{
     var query = search.value
     i = Math.floor(Math.random() * 3)
     var result = products.slice(i,(i+3)%6)
+    if(countItemSearch){
+        countItemSearch.innerText = `Có ${result.length} kết quả tìm kiếm phù hợp`
+    }
     result.forEach(item=>{
         let product = `
         <div class="item col-lg-3 col-md-4 col-sm-6 col-12">
@@ -34,4 +37,6 @@ const searchProduct = ()=>{
         productSearch.insertAdjacentHTML("beforeend", product)
     })
 }
+
+
 

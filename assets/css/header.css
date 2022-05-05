@@ -28,6 +28,10 @@ header {
     display: none;
 }
 
+.cart__heading {
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 992px) {
     .header__left__wrap {
         padding-top: 2px;
@@ -141,6 +145,7 @@ header {
 }
 
 .nav__list>li {
+    cursor: pointer;
     padding: 0.5rem 0.9375rem;
     color: #fff;
     font-size: 0.9375rem;
@@ -208,6 +213,7 @@ header {
     text-transform: uppercase;
     line-clamp: 2;
     text-align: justify;
+    cursor: pointer;
 }
 
 .header__cart__item__price {

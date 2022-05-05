@@ -26,7 +26,7 @@ const renderCartHeader = () => {
                     </div>
                 </div>
             </div>
-            <span class="header__cart__item__remove d-flex justify-content-center" style="width:40px">
+            <span class="header__cart__item__remove d-flex justify-content-center" style="width:40px;cursor:pointer;">
             <i onclick="removeFromCart('${item.id}')" class='bx bxs-trash'></i>
             </span>
         </div>
@@ -111,7 +111,7 @@ const renderCartMain = ()=>{
             </td>
             <td>
                 <div class="d-flex justify-content-center align-items-center">
-                    <a href="#" style="font-size:1rem;">${item.name}</a>
+                    <a href="#" style="font-size:1rem;cursor:pointer">${item.name}</a>
                 </div>
             </td>
             <td>
@@ -135,7 +135,7 @@ const renderCartMain = ()=>{
             </td>
             <td>
                 <div class="d-flex justify-content-center align-items-center">
-                    <span style="font-size:1.875rem ;font-weight:400">
+                    <span style="font-size:1.875rem ;font-weight:400;cursor:pointer">
                     <i onclick="removeFromCart('${item.id}')" class='bx bxs-trash'></i>
                     </span>
                 </div>
